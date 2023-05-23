@@ -27,6 +27,7 @@ Some useful abbreviations are:
                 </ul>
             </nav> 
 
+More useful emmet shortcuts can be found [here](https://docs.emmet.io/cheat-sheet/).
 
 ### 2. SVG 
 Scalable Vector Graphics is a scalable image format, that will easily scale to any size and retain their quality without increasing their filesize. They’re also very useful if you need to create or modify your images programmatically, because you can change their properties through CSS and JavaScript.
@@ -111,8 +112,12 @@ Fun side note: I was able to generate most of this using emmet: table>tr>th>tr>t
 
 
 
+
+
 ---
 ## Advanced HTML and CSS 
+
+
 
 
 ---
