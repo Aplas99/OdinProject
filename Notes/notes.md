@@ -78,7 +78,7 @@ Inline:
 
 ### 3. Tables 
 HTML Tables allow you to create two-dimensional tables made of rows and columns. You create a table with `<table></table>` tags and then put the elements for rows, columns, headers, or anything else that’s possible inside those table elements.
-For example:
+For Example:
 
  <table>
     <tr>
@@ -105,6 +105,90 @@ For example:
     
 
 Fun side note: I was able to generate most of this using emmet: table>tr>th>tr>td
+
+
+In HTML, making sure table headers stand out is important to ensure table readability. Using the `<th>` tag essentially does the same as `<td>` but it denotes a header, thus giving it a bold styling. 
+Example:
+
+<table>
+<tr>
+    <th> Dog </th>
+    <th> Cat </th>
+</tr>
+
+<tr>
+    <td> Spike </td>
+    <td> Cinnamon </td>
+</tr>
+</table>
+
+### Allowing cells to span multiple rows and columns:
+In some cases, we want cells to span multiple rows or colums. In the example below it shows the names of common animals. Sometimes we want to show the names of the males and females next to the animal name and other times  we don't, and in such cases we just want the animal name to span the whole table.
+Example not using span attributes: 
+
+<table>
+  <tr>
+    <th>Animals</th>
+  </tr>
+  <tr>
+    <th>Hippopotamus</th>
+  </tr>
+  <tr>
+    <th>Horse</th>
+    <td>Mare</td>
+  </tr>
+  <tr>
+    <td>Stallion</td>
+  </tr>
+  <tr>
+    <th>Crocodile</th>
+  </tr>
+  <tr>
+    <th>Chicken</th>
+    <td>Hen</td>
+  </tr>
+  <tr>
+    <td>Rooster</td>
+  </tr>
+</table>
+Example with span attributes: 
+
+<table>
+<tr>
+<th colspan="2">Animals</th>
+</tr>
+
+<tr>
+<th colspan="2">Hippopotamus</th>
+</tr>
+
+<tr>
+<th rowspan="2">Horse</th>
+<td>Mare</td>
+</tr>
+
+<tr>
+<td>Stallion</td>
+</tr>
+
+<tr>
+<th colspan="2">Crocodile</th>
+</tr>
+
+<tr>
+<th rowspan="2">Chicken</th>
+<td>Hen</td>
+</tr>
+
+<tr>
+<td>Rooster</td>
+</tr>
+</table>
+
+As you can see, the cells for Horse and Chicken now span two rows and now fit the wanted data: Mare/ Stallion and Hen/ Rooster respectively, comfortably next to them. 
+
+
+
 
 
 ---
