@@ -107,7 +107,7 @@ For Example:
 Fun side note: I was able to generate most of this using emmet: table>tr>th>tr>td
 
 
-In HTML, making sure table headers stand out is important to ensure table readability. Using the `<th>` tag essentially does the same as `<td>` but it denotes a header, thus giving it a bold styling. 
+In HTML, making sure table headers stand out is important to ensure table readability. Using the `<th>` tag essentially does the same as `<td>` but it denotes a header. 
 Example:
 
 <table>
@@ -130,23 +130,29 @@ Example not using span attributes:
   <tr>
     <th>Animals</th>
   </tr>
+
   <tr>
     <th>Hippopotamus</th>
   </tr>
+
   <tr>
     <th>Horse</th>
     <td>Mare</td>
   </tr>
+
   <tr>
     <td>Stallion</td>
   </tr>
+
   <tr>
     <th>Crocodile</th>
   </tr>
+
   <tr>
     <th>Chicken</th>
     <td>Hen</td>
   </tr>
+  
   <tr>
     <td>Rooster</td>
   </tr>
@@ -187,7 +193,58 @@ Example with span attributes:
 
 As you can see, the cells for Horse and Chicken now span two rows and now fit the wanted data: Mare/ Stallion and Hen/ Rooster respectively, comfortably next to them. 
 
+### Styling with `<col>`
+An effective way to style column data is with the `<col>`tag. `<col>` elements are specified inside a `<colgroup>` container just below the opening `<table>` tag.   
 
+<table>
+  <colgroup>
+    <col />
+    <col style="background-color: yellow" />
+  </colgroup>
+  <tr>
+    <th>Data 1</th>
+    <th>Data 2</th>
+  </tr>
+  <tr>
+    <td>Calcutta</td>
+    <td>Orange</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>Jazz</td>
+  </tr>
+</table>
+
+Code: 
+```
+<table>
+  <colgroup>
+    <col />
+    <col style="background-color: yellow" />
+  </colgroup>
+  <tr>
+    <th>Data 1</th>
+    <th>Data 2</th>
+  </tr>
+  <tr>
+    <td>Calcutta</td>
+    <td>Orange</td>
+  </tr>
+  <tr>
+    <td>Robots</td>
+    <td>Jazz</td>
+  </tr>
+</table>
+```
+
+Effectively we are defining two "style columns", one specifying styling information for each column. We are not styling the first column, but we still have to include a blank `<col>` element — if we didn't, the styling would just be applied to the first column.
+
+If you wanted to apply the styling to both columns, we could just include one `<col>` element with a span attribute on it, like this:  
+```
+<colgroup>
+ <col style="background-color: yellow" span="2" />
+</colgroup>
+```
 
 
 
