@@ -245,7 +245,26 @@ If you wanted to apply the styling to both columns, we could just include one `<
  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
+### The scope attribute
 
+The scope attribute, which can be added to the `<th>` element to tell screen readers exactly what cells the header is a header for.  
+Example:
+
+```
+<thead>
+  <tr>
+    <th scope="col">Purchase</th>
+    <th scope="col">Location</th>
+    <th scope="col">Date</th>
+    <th scope="col">Evaluation</th>
+    <th scope="col">Cost (€)</th>
+  </tr>
+</thead>`
+```
+
+Scope has two more possible values — colgroup and rowgroup. These are used for headings that sit over the top of multiple columns or rows.
+
+[See table assignment for examples](https://github.com/Aplas99/OdinProject/blob/main/assignments/table_assignment/blank-template.html)
 
 ---
 ## JavaScript 
