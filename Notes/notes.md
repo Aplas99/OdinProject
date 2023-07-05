@@ -247,7 +247,6 @@ If you wanted to apply the styling to both columns, we could just include one `<
 ```
 
 
-
 ---
 ## JavaScript 
 
